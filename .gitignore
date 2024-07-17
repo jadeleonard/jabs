@@ -3,3 +3,9 @@ node_modules
 dist
 app
 build
+application
+
+
+.idea
+config
+files

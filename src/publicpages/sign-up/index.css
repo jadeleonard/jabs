@@ -1,0 +1,22 @@
+.sign-up{
+    margin: 0px;
+    padding: 0px;
+}
+
+.sign-up-body{
+
+
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 20px;
+}
+
+.section-sign-up{
+    background: transparent;
+}
+
+
+
+.signUpdiv1{
+
+}

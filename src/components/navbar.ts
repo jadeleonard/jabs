@@ -1,9 +1,12 @@
-import {div,img,ul} from "../js-function/elements";
 import { GetNavbar } from "../js-function/useFetch";
 
 
 const nav = document.createElement('nav')
+const ul = document.createElement('ul')
+const div = document.createElement('div')
 
+
+const img = document.createElement('img')
 nav.className = 'nav'
 nav.id = 'nav'
 nav.style.display = 'flex'
@@ -18,8 +21,9 @@ const navbarFunction = async () =>{
         url:string
     }
     navbarProps.forEach((item:props) =>{
-        const li = document.createElement('li') as HTMLLIElement
         const a = document.createElement('a') as HTMLAnchorElement
+        const li = document.createElement('li') as HTMLLIElement
+
         a.href  = item.url
         a.innerText = item.name
         li.className = 'navbar-list-links'

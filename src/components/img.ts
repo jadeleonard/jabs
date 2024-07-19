@@ -21,6 +21,7 @@ const GetImage = (props:ImageProps) =>{
         img.className = props.className
         img.alt = props.alt
 
+
     }
     return img
 }

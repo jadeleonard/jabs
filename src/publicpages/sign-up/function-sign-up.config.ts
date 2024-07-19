@@ -7,7 +7,9 @@ const SubmitButton: ButtonProps = {
     id: 'button',
     type: 'submit',
     onClick: (event: MouseEvent) => {
-        window.location.href = '/sign-up';
+        document.addEventListener('focus',() =>{
+
+        })
     },
     textContent: 'Submit' // Added text content to avoid an empty button
 };

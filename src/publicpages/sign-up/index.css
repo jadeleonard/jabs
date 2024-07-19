@@ -17,6 +17,30 @@
 
 
 
+.button{
+    padding: 10px 14px;
+    background: black;
+    color: white;
+    transition: 0.5s;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+    font-family: sans-serif;
+    cursor: pointer;
+    
+}
+.button:hover{
+    background: #3f3f3f;
+
+}
+.button:focus{
+    border-color: #464646;
+    box-shadow: 1px 1px 1px #4b4b4b;
+
+}
+
+
+
 .signUpdiv1{
 
 }

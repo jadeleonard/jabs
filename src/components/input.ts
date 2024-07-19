@@ -8,7 +8,7 @@ interface InputProps {
     placeholder:string
     textContent:string
     value:string
-    innerText:String
+    innerText:string
 
 }
 

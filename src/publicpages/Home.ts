@@ -24,6 +24,8 @@ async function RenderHome() {
         application.appendChild(HomepageArea); // Append the content area with new content
         HomepageArea.appendChild(nav)
         HomepageArea.appendChild(heroMain)
+
+
         application.appendChild(App)
     }
 }

@@ -1,25 +1,35 @@
 import { GetNavbar } from "../js-function/useFetch";
-
+import {ButtonProps,GetButton} from "./button";
+import {ImageProps,GetImage} from "./img";
 
 const nav = document.createElement('nav')
 const ul = document.createElement('ul')
 const div = document.createElement('div')
 
 
-const img = document.createElement('img')
+
 nav.className = 'nav'
 nav.id = 'nav'
 nav.style.display = 'flex'
 nav.style.alignItems = 'center'
 nav.style.margin = 'auto'
 nav.style.justifyContent = 'space-between'
-
+const LogoImage :ImageProps ={
+    className:'image',
+    id:'image',
+    width:125,
+    height:40,
+    alt:'logo',
+    src:'#',
+}
+const Image = GetImage(LogoImage)
 const navbarFunction = async () =>{
     const navbarProps = await GetNavbar()
     interface props{
         name:string
         url:string
     }
+
     navbarProps.forEach((item:props) =>{
         const a = document.createElement('a') as HTMLAnchorElement
         const li = document.createElement('li') as HTMLLIElement
@@ -49,18 +59,29 @@ const navbarFunction = async () =>{
         a.className = 'a'
         li.appendChild(a)
         ul.appendChild(li)
+
+
     })
 
 }
+const buttonProps:ButtonProps ={
+    className:'button',
+    id:'button',
+    type:'submit',
+    onClick: () =>{
+        window.location.href = '/sign-up'
+    },
+    textContent:'Submit'
+}
+const buttonSubmit = GetButton(buttonProps)
 navbarFunction()
 
-div.appendChild(img)
+div.appendChild(Image)
 
 div.className = 'logoBody'
-img.className = 'logo'
+
 div.style.margin = 'auto'
-img.width = 125
-img.height = 40
+
 div.style.display = ''
 ul.className = 'navbar-orderList'
 ul.style.display = 'inline-flex'
@@ -71,7 +92,7 @@ ul.style.margin = 'auto'
 
 nav.appendChild(div)
 nav.appendChild(ul)
-
+nav.appendChild(buttonSubmit)
 export default nav
 
 

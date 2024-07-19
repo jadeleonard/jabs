@@ -1,5 +1,5 @@
 import { GetNavbar } from "../js-function/useFetch";
-import {ButtonProps,GetButton} from "./button";
+import {ButtonProps,GetButton} from "./button/button";
 import {ImageProps,GetImage} from "./img";
 
 const nav = document.createElement('nav')

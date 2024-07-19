@@ -1,7 +1,7 @@
 import nav from '../components/navbar'
 import {application} from "../index";
 import heroMain from "../components/hero";
-
+import cta from '../components/cta'
 
 
 async function RenderHome() {
@@ -24,7 +24,7 @@ async function RenderHome() {
         application.appendChild(HomepageArea); // Append the content area with new content
         HomepageArea.appendChild(nav)
         HomepageArea.appendChild(heroMain)
-
+        HomepageArea.appendChild(cta)
 
         application.appendChild(App)
     }

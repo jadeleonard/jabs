@@ -6,6 +6,7 @@ export interface ButtonProps {
     type?: 'submit' | 'reset' | 'button';
     onClick?: (event: MouseEvent) => void; // Specify MouseEvent with HTMLButtonElement
     textContent: string;
+    style?:string
 }
 
 export const GetButton = (props: ButtonProps): HTMLButtonElement => {
@@ -21,7 +22,11 @@ export const GetButton = (props: ButtonProps): HTMLButtonElement => {
             if (props.onClick) {
                 props.onClick(event);
             }
-        };
+        }
+
+    }
+    if(props.style){
+        Button.style.cssText = props.style
     }
 
     return Button;

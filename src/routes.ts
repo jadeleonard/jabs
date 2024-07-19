@@ -8,8 +8,6 @@ import RenderAbout from "./publicpages/Aboutus";
 
 import Meta from "./js-function/metaTags";
 
-import Contact from './publicpages/Contact'
-// Check if the element exists before appending
 
 
 

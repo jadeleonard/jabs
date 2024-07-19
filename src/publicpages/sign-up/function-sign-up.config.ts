@@ -1,4 +1,4 @@
-import { ButtonProps, GetButton } from '../../components/button'
+import { ButtonProps, GetButton } from '../../components/button/button'
 
 
 
@@ -11,7 +11,8 @@ const SubmitButton: ButtonProps = {
 
         })
     },
-    textContent: 'Submit' // Added text content to avoid an empty button
+    textContent: 'Submit',
+    style:''
 };
 
 const ButtonSubmit = GetButton(SubmitButton);

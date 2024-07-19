@@ -1,9 +1,21 @@
+import { CardBody, Cardtitle } from "./card.config"
 
 let setError:string| null = null
 interface CardProps{
     className:string
     id:string
-    appendChild: 'CardTitle' | 'CardHeader' | HTMLElement
+    style?:string
+
+
+    appenChild?:HTMLElement | HTMLElement[]
+
+}
+
+interface CardDescription {
+    textContent:string
+    className:string
+    id:string
+    style:string
 
 }
 interface CardTitle{
@@ -12,12 +24,16 @@ interface CardTitle{
     id:string
     style:string
 }
+
 interface  CardHeader{
     textContent:string
     className:string
     id:string
     style:string
 }
+
+
+
 const GetHeader=(props:CardHeader):HTMLParagraphElement =>{
         const CardHeader = document.createElement('p') as HTMLParagraphElement
 
@@ -32,6 +48,22 @@ const GetHeader=(props:CardHeader):HTMLParagraphElement =>{
         }
 
     return CardHeader
+}
+
+const GetCardDescription = (props:CardDescription):HTMLParagraphElement =>{
+    const Description = document.createElement('p') as HTMLParagraphElement
+
+        if(Description){
+            Description.className = props.className
+            Description.id = props.id
+            Description.textContent = props.textContent
+
+        }
+        if(props.style){
+            Description.style.cssText = props.style
+        }
+
+    return  Description
 }
 const GetCardTitle = (props:CardTitle):HTMLParagraphElement =>{
     const Cardtitle = document.createElement('p') as HTMLParagraphElement
@@ -51,9 +83,23 @@ const GetCardBody = (props:CardProps) :HTMLDivElement=>{
 
             Card.className = props.className
             Card.id = props.id
+            
+            if(props.style){
+                Card.style.cssText = props.style
+            }
+            if(props.appenChild){
+               if(Array.isArray(props.appenChild)){
+                props.appenChild.forEach(child => Card.appendChild(child))
+               }else{
+                Card.appendChild(props.appenChild)
+               }
+            }
 
+          
+            return 
+            
 
-            return Card
+   
 }
 
-export {CardHeader,CardTitle,CardProps,GetCardTitle,GetCardBody,GetHeader}
+export {CardHeader,CardTitle,CardProps,GetCardTitle,GetCardBody,GetHeader,CardDescription,GetCardDescription}

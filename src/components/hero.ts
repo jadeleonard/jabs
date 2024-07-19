@@ -1,5 +1,5 @@
 import {GetHero} from '../js-function/useFetch'
-
+import {CardBody} from '../components/card/card.config'
 const heroMain = document.createElement('div') as HTMLDivElement
 
 
@@ -49,6 +49,7 @@ async function HeroContent() {
     })
 
 
+    
 }
 HeroContent()
 

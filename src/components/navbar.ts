@@ -1,5 +1,5 @@
 import { GetNavbar } from "../js-function/useFetch";
-import {ButtonProps,GetButton} from "./button/button";
+
 import {ImageProps,GetImage} from "./img";
 
 const nav = document.createElement('nav')
@@ -64,16 +64,7 @@ const navbarFunction = async () =>{
     })
 
 }
-const buttonProps:ButtonProps ={
-    className:'button',
-    id:'button',
-    type:'submit',
-    onClick: () =>{
-        window.location.href = '/sign-up'
-    },
-    textContent:'Submit'
-}
-const buttonSubmit = GetButton(buttonProps)
+
 navbarFunction()
 
 div.appendChild(Image)
@@ -92,7 +83,7 @@ ul.style.margin = 'auto'
 
 nav.appendChild(div)
 nav.appendChild(ul)
-nav.appendChild(buttonSubmit)
+
 export default nav
 
 

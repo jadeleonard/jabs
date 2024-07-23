@@ -10,10 +10,16 @@ async function RenderSignUp() {
         const signuppage = document.createElement('div') as HTMLDivElement
 
         
-        const button = Button({
-                textContent:'Button'
-        })
-        signuppage.appendChild(button)
+        
+        const bodydiv = document.createElement('div') as HTMLDivElement
+        
+
+        bodydiv.style.display = 'grid'
+        bodydiv.style.gridTemplateColumns = '1fr 1fr'
+        
+
+
+        
         application.appendChild(signuppage)
        }
 

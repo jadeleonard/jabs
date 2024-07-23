@@ -6,6 +6,8 @@ import RenderHome from "./publicpages/Home";
 import RenderAbout from "./publicpages/Aboutus";
 
 
+import RenderSignUp from "./publicpages/sign-up/sign-up";
+
 import Meta from "./js-function/metaTags";
 
 
@@ -34,6 +36,13 @@ router
             description:''
         })
         await RenderAbout();
+    })
+    .on('/sign-up',async () =>{
+        Meta({
+            title:'Sign Up',
+            description:''
+        })
+        await RenderSignUp()
     })
 
     .resolve(); // This will trigger the route matching on initial load

@@ -1,21 +1,12 @@
 // src/index.ts
 import Navigo from "navigo";
-import  nav  from './components/navbar';
-import {application} from './index'
 import RenderHome from "./publicpages/Home";
 import RenderAbout from "./publicpages/Aboutus";
-
-
-import RenderSignUp from "./publicpages/sign-up/sign-up";
 
 import Meta from "./js-function/metaTags";
 
 
-
-
-
-
-
+import RenderSelection from "./publicpages/selection/selection";
 
 
 
@@ -37,12 +28,13 @@ router
         })
         await RenderAbout();
     })
-    .on('/sign-up',async () =>{
+  
+    .on('/selection',async() =>{
         Meta({
-            title:'Sign Up',
+            title:'Selection',
             description:''
         })
-        await RenderSignUp()
+        await RenderSelection();
     })
 
     .resolve(); // This will trigger the route matching on initial load

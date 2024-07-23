@@ -1,6 +1,6 @@
 import { GetNavbar } from "../js-function/useFetch";
 
-import {ImageProps,GetImage} from "./img";
+import Image from '../components/img'
 
 const nav = document.createElement('nav')
 const ul = document.createElement('ul')
@@ -14,15 +14,19 @@ nav.style.display = 'flex'
 nav.style.alignItems = 'center'
 nav.style.margin = 'auto'
 nav.style.justifyContent = 'space-between'
-const LogoImage :ImageProps ={
-    className:'image',
-    id:'image',
+
+
+
+
+
+
+
+const logo = Image({
+    src:'',
     width:125,
     height:40,
-    alt:'logo',
-    src:'#',
-}
-const Image = GetImage(LogoImage)
+
+})
 const navbarFunction = async () =>{
     const navbarProps = await GetNavbar()
     interface props{
@@ -67,7 +71,7 @@ const navbarFunction = async () =>{
 
 navbarFunction()
 
-div.appendChild(Image)
+div.appendChild(logo)
 
 div.className = 'logoBody'
 

@@ -1,30 +1,28 @@
 
 
 interface ImageProps {
-    src:string
-    id:string
-    width:number
-    height:number
-    className:string
-    alt:string
+    src?:string
+    id?:string
+    width?:number
+    height?:number
+    className?:string
+    alt?:string
+    style?:string
 
 }
 
-const GetImage = (props:ImageProps) =>{
+const Image = (props:ImageProps) =>{
     const img = document.createElement('img') as HTMLImageElement
-
-    if(img){
-        img.src = props.src
-        img.id = props.id
-        img.width = props.width
-        img.height = props.height
-        img.className = props.className
-        img.alt = props.alt
-
-
+    if(props.src) img.src = props.src
+    if(props.id) img.id = props.id
+    if(props.width) img.width = props.width
+    if(props.height) img.height = props.height
+    if(props.alt) img.alt = props.alt
+    if(props.className) img.className = props.className
+    if(props.style){
+        img.style.cssText = props.style
     }
     return img
 }
 
-
-export {ImageProps,GetImage}
+export default Image

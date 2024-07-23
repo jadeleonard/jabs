@@ -43,6 +43,9 @@ async function HeroContent() {
 
 
         })
+        heroButton.addEventListener('click',()=>{
+            window.location.href = '/selection'
+        })
         heroMain.appendChild(heroTitle)
         heroMain.appendChild(heroDescription)
         heroMain.appendChild(heroButton)

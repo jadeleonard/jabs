@@ -1,7 +1,13 @@
 
+
+const apiNavbar = process.env.PUBLIC_API_NAVBAR
+
+
+
+const apiHero = process.env.PUBLIC_API_HERO
 async function GetNavbar() {
     try {
-        const response = await fetch('https://green-market-backend-git-main-lukabartos-projects.vercel.app/navbar',{
+        const response = await fetch(apiNavbar,{
             method:'GET',
             headers:{
                 'Application-Type':'application.json'
@@ -20,9 +26,12 @@ async function GetNavbar() {
         return []
     }
 }
+
+
+
 async function GetHero() {
     try{
-        const response = await fetch('https://green-market-backend-git-main-lukabartos-projects.vercel.app/hero',{
+        const response = await fetch(apiHero,{
             method:'GET',
             headers:{
                 'Application-Type':'application/json'

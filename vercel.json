@@ -1,0 +1,5 @@
+{
+    "redirects":[
+        {"source":"./src/pages/home/home.ts","destination":"/","permament":true}
+    ]
+}

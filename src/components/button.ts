@@ -42,4 +42,6 @@ const Button = (props: ButtonProps) :HTMLButtonElement=> {
 
 
 
-export default Button
+export {
+  Button,ButtonProps
+}

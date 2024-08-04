@@ -1,4 +1,4 @@
-import Button from "../../components/button";
+import {Button} from "../../components/button";
 import Input from "../../components/input";
 
 // Create and append elements to the DOM
@@ -22,7 +22,7 @@ const ValuePassword = Input({
 
 const buttonSubmit = Button({
     textContent: 'Submit',
-    style: 'padding:10px 14px; border-radius:6px; background:black; color:white;'
+    class:'py-2 px-4 bg-black text-white transition duration hover:bg-slate-600 '
 });
 
 // Append elements to the body (or your desired container)

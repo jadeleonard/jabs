@@ -1,6 +1,6 @@
 import { application } from "../.."; // Ensure this path is correct
 import P from "../../components/p";
-import Button from "../../components/button";
+import {Button} from "../../components/button";
 
 const selectionData = [
     { title: "Applicant", description: "A job seeker that looking for job", action: '/jobseeker-register',selection:'Select Applicant' },
